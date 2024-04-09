@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+}
+h1 a{
+    margin-right: 30px;
+    color: white;
+}              
+p{
+    text-align:center
+}
+#a1{
+    position: relative; left:350px;
+}
