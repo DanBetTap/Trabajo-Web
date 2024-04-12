@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
     <style>
         #registrar{
             position: relative; left: 350px;
@@ -11,31 +13,12 @@
         #pago{
             text-align: right;
         }
-        header{
-            background-color: red;
-        }
-        h1{
-            text-align: center;
-        }
-        h1 a{
-            margin-right: 30px;
-            color: white
-        }
-        main{
-            background-color: white;
-            
-        }
         img{
             text-align: center;
         }
-        footer{
-            background-color: silver;
         }
         p{
             text-align: center;
-        }
-        footer{
-            background-color: silver;
         }
     </style>
 </head>
@@ -46,25 +29,35 @@
             <a href="PaginaConocenos.html">Conocenos</a>
             <a href="PaginaBuffet.html">Buffet</a>
             <a href="PaginaReserva.html">Reserva</a>
-            <a id="registrar" href="PaginaRegistrar.html">Registrar</a>
+            <a id="registrar" href="PaginaCuenta.html">Cuenta</a>
         </h1>
+    </header>
+    <main>  
         <h2 style="background-color: rgb(231, 231, 231);">
             <p>Ingrese los datos
-            <p Style="color: darkgoldenrod;">Complete name: *Insertar cuadro de requisito*
-                <br> rut: *ICR*
-                <br> fecha cumpleaños: *ICR*
-                <br> correo: *ICR*
-                <br> direccion: *ICR*
-                <br> 
+            <p Style="color: darkgoldenrod;">Nombre Completo:
+                <input type="text" name="nombre" value="" placeholder="Nombre Completo">
+                <br> Rut:
+                <input type="text" name="rut" value="" placeholder="Rut">
+                <br> Fecha de Nacimiento:
+                <input type="date" name="Cumpleaños" value="" placeholder="Fecha Nacimiento">
+                <br> Correo:
+                <input type="text" name="correo" value="" placeholder="Correo">
+                <br> Direccion:
+                <input type="text" name="direccion" value="" placeholder="Direccion">
+                <br>Contraseña:
+                <input type="text" name="contraseña" value="" placeholder="Contraseña">
             </p>
             <p>
-                Confirmar *boton*
+                <input type="button" value="Confirmar"*boton*>
+            </p>
         </h2>
-    </header>
+    </main>
     <footer>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla mollitia, quod adipisci laudantium, beatae tempore dolor cumque expedita maxime amet totam commodi iure, libero itaque eius corrupti? Voluptas, dolorem!
         </p>
     </footer>
 </body>
+<script src="js/bootstrap.bundle.min.js"></script>
 </html>

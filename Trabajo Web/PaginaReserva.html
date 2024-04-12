@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./CSS/Style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PaginaReserva</title>
-
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
 </head>
 <body>
-    <h1 Style="background-color: red;">
-        <a href="PaginaInicio.html">Inicio</a>
-        <a href="PaginaConocenos.html">Conocenos</a>
-        <a href="PaginaBuffet.html">Buffet</a>
-        <a href="PaginaReserva.html">Reserva</a>
-        <a id="a1" href="PaginaRegistrar.html">Registrar</a>
-    </h1>
-
-    <h2 style="background-color: rgb(231, 231, 231);">
-        <p>Ingrese los datos
-        <p Style="color: darkgoldenrod;">Complete name: *Insertar cuadro de requisito*
-            <br> rut: *ICR*
-            <br> fecha/hora: *ICR*
-            <br> Insertar precio de la consulta
-        <p>
-            Pagar *boton*
-    </h2>
-    <footer Style="background-color: silver;">
+    <header>
+        <h1>
+            <a href="PaginaInicio.html">Inicio</a>
+            <a href="PaginaConocenos.html">Conocenos</a>
+            <a href="PaginaBuffet.html">Buffet</a>
+            <a href="PaginaReserva.html">Reserva</a>
+            <a id="registrar" href="PaginaCuenta.html">Cuenta</a>
+        </h1>
+    </header>
+    <main>
+        <h2 style="background-color: rgb(231, 231, 231);">
+            <p>Ingrese los datos
+            <p Style="color: darkgoldenrod;">Nombre Completo:
+            <input type="text" name="nombre" value="" placeholder="Nombre Completo">
+            <br> Rut:
+            <input type="text" name="rut" value="" placeholder="Rut">
+            <br> Fecha y Hora de reserva:
+            <input type="datetime-local" name="reserva" value="">
+            <br>Escriba sobre su caso:
+            <input type="text" name="caso" value="" placeholder="Caso">
+            </p>
+            <p>
+                <input type="button" value="Reservar">
+    </main>
+    <footer>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit id rerum praesentium cumque corporis veritatis ex velit ducimus. Sed libero exercitationem facilis quasi quae dolorum voluptas? Cumque soluta ut incidunt.
         </p>
     </footer>
 </body>
+<script src="js/bootstrap.bundle.min.js"></script>
 </html>
