@@ -64,21 +64,6 @@ footer{
     margin-bottom: 16px;
 }
 
-.formulario-login p{
-    height: 40px;
-    text-align: center;
-    border-bottom: 1px solid;
-}
-
-.formulario-login a{
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.formulario-login a:hover{
-    text-decoration: underline;
-}
 
 .form-bienvenido{
     width: 500px;
@@ -126,4 +111,13 @@ img {
 *{
     margin: 0;
     padding: 0px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    margin: 10px;
 }
