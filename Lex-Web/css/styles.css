@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #041f03;
+    --background-color: #f9f5f0;
+    --dark-color: #151515;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.heading-1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+
+
+/* NAVBAR */
+
+#btn-menu { 
+	display: none;
+}
+.menu-overlay {
+    display: none;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 7rem;
+    position: fixed; /* Fijar la barra de navegación */
+    top: 0; /* Anclarla en la parte superior */
+    width: 100%; /* Ocupar el ancho completo */
+    background-color: transparent; /* Hacer la barra de navegación transparente por defecto */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    transition: background-color 0.6s
+}
+
+.navbar.scrolled {
+    background-color: var(--primary-color); /* Color de fondo del navbar al hacer scroll */
+}
+
+.navbar.scrolled .menu-logo,
+.navbar.scrolled .menu a,
+.navbar.scrolled .usuario a {
+    color: white; /* Cambiar el color del logo y de los elementos del menú a blanco */
+}
+
+.menu-logo {
+    color: black; /* Color blanco para el logo */
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombreado para el texto */
+    margin-right: 10rem;
+    margin-left: 30rem;
+}
+
+.menu {
+    display: flex;
+    gap: 2.5rem;
+    flex: 1;
+}
+
+.usuario{
+    display:flex;
+    gap:1.5rem;
+    margin-right: 10rem;
+}
+
+.menu li, .usuario li {
+    list-style: none;
+}
+
+.menu a, .usuario a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black; /* Color blanco para los enlaces */
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu a:hover::after, .usuario a:hover::after {
+    content: ''; /* Agregar el pseudo-elemento solo en hover */
+    position: absolute;
+    bottom: -5px; /* Posicionar el borde inferior */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Grosor del borde */
+    background-color: var(--primary-color); /* Color de fondo en hover */
+    border-radius: 3px; /* Borde redondeado */
+}
+
+
+/* BANNER */
+.banner {
+    height: 100vh; /* Hacer que la sección del banner ocupe todo el viewport */
+    overflow: hidden; /* Ocultar el desbordamiento de la imagen */
+    position: relative; /* Posición relativa para el contenido dentro de la sección */
+}
+
+.banner img {
+    position: absolute; /* Posicionar la imagen absolutamente dentro de la sección */
+    top: 0; /* Anclar la imagen en la parte superior */
+    left: 0; /* Anclar la imagen en la parte izquierda */
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+    height: auto; /* Altura automática para mantener la proporción */
+    z-index: -1; /* Colocar la imagen detrás de otros elementos */
+    filter: brightness(0.9);
+
+}
+
+.carousel-caption {
+    position: absolute; /* Permite superponer el texto sobre la imagen */
+    text-align: center; /* Centra horizontalmente */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra completamente con traducción */
+    color: white; /* Asegura que el texto sea visible */
+    text-shadow: 2px 2px 4px black;
+}
+
+
+.carousel-caption h5 {
+    font-size: 5rem; /* Tamaño del texto del título */
+}
+
+.carousel-caption p {
+    font-size: 2rem; /* Tamaño del texto del párrafo */
+}
+
+/* NOSOTROS */
+
+.nosotros-container {
+    background-color: var(--background-color);
+    padding: 68px 0px;
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+}
+
+.nosotros-container img {
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    max-width: 50%; /* Limitar el ancho de la imagen */
+}
+
+.content-nosotros {
+    max-width: 50%; /* Limitar el ancho del contenido */
+}
+
+.content-nosotros h2 {
+    margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+}
+
+/* SERVICIOS */
+
+#Servicios {
+    padding: 50px 0; /* Espacio alrededor de la sección de servicios */
+    background-color: var(--background-color);
+}
+
+#Servicios h2 {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 2rem;
+}
+
+.servicios-container {
+    display: grid; /* Usar Grid Layout para los servicios */
+    grid-template-columns: repeat(4, 1fr); /* Crear 4 columnas iguales */
+    gap: 5px; /* Espacio entre las columnas */
+}
+
+.servicio {
+    position: relative; /* Posición relativa para el posicionamiento del texto */
+    background-size: cover; /* Ajustar el tamaño de fondo */
+    background-position: center; /* Centrar la imagen de fondo */
+    border-radius: 2px; /* Borde redondeado */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    height: 441px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.servicio1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Img/img2.jpg');
+}
+
+.servicio2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Img/img3.jpg');
+}
+
+.servicio3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Img/img4.jpg');
+}
+
+.servicio4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Img/img5.jpg');
+}
+
+.servicio:hover {
+    filter: brightness(1.5); /* Aumentar el brillo en hover */
+}
+
+.servicio h1,
+.servicio p {
+    color: white; /* Color del texto */
+    margin: 20px; /* Márgenes internos */
+}
+
+.servicio button {
+    position: absolute; /* Posición absoluta para el botón */
+    bottom: 20px; /* Espacio inferior */
+    left: 20px; /* Espacio izquierdo */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cursor de puntero */
+    transition: all 0.3s; /* Transición suave para el efecto de hover */
+}
+
+.servicio button:hover {
+    color: #ccc; /* Cambiar el color del texto en hover */
+}
+
+.btn-sv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.btn-sv button{
+    padding: 1rem;
+    bottom: 20px; /* Espacio inferior */
+    left: 20px; /* Espacio izquierdo */
+    background-color: black; /* Fondo transparente */
+    border-radius: 2rem; /* Sin borde */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cursor de puntero */
+    transition: all 0.3s; /* Transición suave para el efecto de hover */
+}
+
+.btn-sv button:hover{
+    padding: 1.7rem;
+    font-size: 0.9rem;
+}
+
+
+
