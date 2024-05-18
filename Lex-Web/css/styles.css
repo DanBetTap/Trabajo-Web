@@ -130,7 +130,7 @@ html {
 }
 
 .menu-overlay.open {
-    height: 25%; /* Menos de la mitad de la pantalla */
+    height: 35%; /* Menos de la mitad de la pantalla */
 }
 
 .menu-overlay ul {
@@ -175,13 +175,14 @@ html {
     position: relative;
 }
 
-.banner img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: -1;
+
+.banner-container {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     filter: brightness(0.9);
 }
 
@@ -202,6 +203,7 @@ html {
 .carousel-caption p {
     font-size: 2rem;
 }
+
 
 /* NOSOTROS */
 .nosotros-container {
@@ -486,15 +488,15 @@ html {
     }
 
     .menu-footer {
-		grid-template-columns: repeat(2, 1fr);
-	}
+	grid-template-columns: repeat(2, 1fr);
+    }
 
-	.copyright {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 1.5rem;
-	}
+    .copyright {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+    }
 }
 
 
@@ -529,11 +531,11 @@ html {
     }
 
 
-	.contact-info {
-		align-items: center;
-	}
+    .contact-info {
+	align-items: center;
+    }
 
-	.menu-footer{
-		grid-template-columns: 1fr;
-	}
+    .menu-footer{
+	grid-template-columns: 1fr;
+    }
 }
