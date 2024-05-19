@@ -1,0 +1,287 @@
+:root {
+    --primary-color: #2D2F36;
+    --background-color: #f9f5f0;
+    --dark-color: #151515;
+    --white-color: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../Img/img2.jpg');
+    background-size: cover;
+}
+
+
+/* NAVBAR */
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-height: 7rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.6s;
+}
+
+.navbar-top.scrolled {
+    background-color: var(--primary-color);
+}
+
+.navbar-top.scrolled .menu-logo {
+    color: white;
+}
+
+.navbar-top.scrolled .btn-menu span {
+    color: white !important;
+}
+
+.menu-logo {
+    color: black;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.user-icon {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black; /* Borde de 1px */
+    border-radius: 50%; /* Crea un círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Relleno interior blanco */
+
+}
+
+.user-icon i {
+    font-size: 2rem; /* Ajusta el tamaño del icono según tu preferencia */
+}
+
+/* MENU OVERLAY */
+#btn-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 3rem !important; /* Ajuste para que el menú esté debajo del navbar */
+    left: 0;
+    width: 100%;
+    height: 0; 
+    background-color: var(--primary-color);
+    z-index: 999;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.menu-overlay.open {
+    height: 35%; /* Menos de la mitad de la pantalla */
+}
+
+.menu-overlay ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+.menu-overlay ul li {
+    margin: 10px 0;
+}
+
+.menu-overlay ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#btn-menu .menu-icon {
+    color: black;
+}
+
+#btn-menu .close-icon {
+    display: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.menu-overlay .close-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white !important;
+    font-size: 2rem !important;
+    cursor: pointer;
+}
+
+
+
+.container {
+    display: flex;
+
+}
+
+.navbar-left {
+    background-color: transparent;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.navbar-left  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-left  ul li {
+    margin-bottom: 2.2rem;
+}
+
+.navbar-left  ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    width: 100%;
+    position: relative; /* Añadimos position: relative */
+}
+
+.navbar-left  ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajustamos la posición para que esté debajo del texto */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Altura de la línea */
+    background-color: transparent; /* Cambiamos el color a transparente por defecto */
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.navbar-left  ul li a:hover::after {
+    background-color: black; /* Cambiamos el color al hacer hover */
+}
+
+main {
+    margin-left: 250px; /* Same as the width of the nav */
+    margin-top: 4rem;
+    padding: 2rem;
+    width: calc(100% - 250px); /* Adjust width to account for the fixed nav */
+}
+
+.section {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.card, .causa, .documento {
+    background-color: #f9f9f9;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 0 1rem;
+        background-color: var(--primary-color);
+    }
+
+    #btn-menu {
+        display: block;
+    }
+
+    .btn-menu span {
+        color: white !important;
+    }
+
+    .menu-logo {
+        color: white !important;
+    }
+
+    .menu, .usuario {
+        display: none;
+    }
+
+    .menu ul {
+        gap: 1.5rem;
+    }
+
+    .usuario ul {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width: 468px) {
+    .menu-logo {
+        margin-right: 0.5rem;
+    }
+
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INICIAR SESIÓN</title>
+    <link rel="stylesheet" href="../css/styles-login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="menu-logo">LEX</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Servicios</a></li>
+                    <li><a href="location.html">Nosotros</a></li>
+                    <li><a href="#Contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="btn-menu" id="btn-menu">
+                <span class="menu-icon">&#9776;</span> <!-- Icono de menú -->
+            </div>
+        </nav>
+    </header>
+    
+    <div class="menu-overlay" id="menu-overlay">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <section class="login-section">
+        <div class="page">
+            <div class="container-page">
+                <div class="left">
+                    <div class="login">Iniciar Sesión</div>
+                    <div class="eula">Al iniciar sesión, aceptas los términos ridículamente largos que no te molestaste en leer.</div>
+                </div>
+                <div class="right">
+                    <div class="form">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Recuérdame</label>
+                        </div>
+                        <input type="submit" id="submit" value="Iniciar Sesión">
+                        <div class="extra-links">
+                            <a href="#">¿Has olvidado tu contraseña?</a>
+                            <a href="#">¿No tienes una cuenta? Regístrate aquí</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer" id="Contacto">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Politicas de Privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contactános</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>
+                    LEX CHILE &copy; 2024
+                </p>
+
+                <img src="../Img/payment.png" alt="Pagos">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script src="../JavaScript/login.js"></script>
+    <script src="../JavaScript/script.js"></script>
+
+</body>
+
+</html>
