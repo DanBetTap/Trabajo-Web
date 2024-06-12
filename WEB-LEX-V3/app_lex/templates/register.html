@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registrarse{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Styles/styles-register.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="register-section">
+    <div class="page"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{% static "Images/img2.jpg" %}');">
+        <div class="container-page">
+            <div class="left">
+                <div class="login">Registrarse</div>
+                <div class="eula">Al registrarte, aceptas los términos y condiciones de nuestro servicio.</div>
+            </div>
+            <div class="right">
+                <form id="register-form" class="form" method="post" action="{% url 'register' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" id="submit">Registrarse</button>
+                    <div class="extra-links">
+                        <a href="{% url 'login' %}">¿Ya tienes una cuenta? Inicia sesión aquí</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'JavaScript/lex-register.js' %}"></script>
+{% endblock %}

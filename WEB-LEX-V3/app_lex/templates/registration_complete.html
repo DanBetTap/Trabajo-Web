@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registro Completo{% endblock %}
+
+{% block content %}
+<section class="register-complete-section">
+    <div class="page" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{% static "Images/img2.jpg" %}');">
+        <div class="container-page">
+            <div class="left">
+                <div class="login">Registro Completo</div>
+                <div class="eula">Tu cuenta ha sido creada exitosamente. Ahora puedes iniciar sesión.</div>
+            </div>
+            <div class="right">
+                <a href="{% url 'login' %}" class="btn">Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
